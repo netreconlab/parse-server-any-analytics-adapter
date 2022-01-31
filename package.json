@@ -1,0 +1,28 @@
+{
+  "name": "parse-any-analytics",
+  "version": "1.0.0",
+  "description": "Universal analytics adapter for Parse Server",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/netreconlab/parse-any-analytics.git"
+  },
+  "keywords": [
+    "parse",
+    "parse-server",
+    "analytics",
+    "analytics-adapter"
+  ],
+  "author": "Alyssa Donawa",
+  "license": "GNU",
+  "bugs": {
+    "url": "https://github.com/netreconlab/parse-any-analytics/issues"
+  },
+  "homepage": "https://github.com/netreconlab/parse-any-analytics#readme",
+  "dependencies": {
+    "analytics": "^0.7.21"
+  }
+}
