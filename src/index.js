@@ -1,10 +1,8 @@
-import ApiAnalyticsAdapter from './ApiAnalyticsAdapter';
-import ApiPayloadConverter from './ApiPayloadConverter';
+import AgnosticAnalyticsAdapter from './AgnosticAnalyticsAdapter';
 import Errors from './Errors';
 
 export default ApiAnalyticsAdapter;
 export {
-  ApiPayloadConverter,
-  ApiAnalyticsAdapter,
+  AgnosticAnalyticsAdapter,
   Errors,
 };

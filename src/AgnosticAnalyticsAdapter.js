@@ -3,25 +3,28 @@ const fs = require('fs').promises;
 const Analytics = require('analytics');
 const AnalyticsAdapter = require('./AnalyticsAdapter');
 const Errors = require('./Errors');
-
+/* Initialize analytics */
 const analytics = Analytics({
     app: '',
+    version: 100,
     plugins: [
     //  To-do.
     ]
   })
-  
+
 /**
- * @class ApiAnalyticsAdapter
- * @description An analytics adapter for Parse Server 
+ * @class AgnosticAnalyticsAdapter
+ * @description An analytics adapter for Parse Server using the Analytics (agnostic) package
  */
- class ApiAnalyticsAdapter extends AnalyticsAdapter {
+ class AgnosticAnalyticsAdapter extends AnalyticsAdapter {
     /**
      * Creates a new analytics adapter.
      * @param {Object} tracking id 
      */
     constructor(tracking_id){
         this.tracking_id = tracking_id;
+        // initialize analytics inside constructor, create a property on top of the constructor (const)
+        // Look at Analytics original js code for how they construct
     }
     appOpened(parameters, req){
         return Promise.resolve({});
@@ -29,19 +32,15 @@ const analytics = Analytics({
     trackEvent(eventName, parameters, req){
         var visitor;
         if (typeof(req.auth.user) !== 'undefined') {
-        visitor = ua(this._tracking_id, req.auth.user.id);
+        // visitor = ua(this._tracking_id, req.auth.user.id);
+        visitor = analytics.identify(this.tracking_id)
         } else {
-        visitor = ua(this._tracking_id);
+        // visitor = ua(this._tracking_id);
+        visitor = analytics.identify(this.tracking_id)
         }
-        var params = {
-        ec: eventName,
-        ea: parameters.action || eventName,
-        el: parameters.label || '',
-        ev: parameters.value || 0,
-        dp: parameters.page || req.originalUrl
-        }
-        
-        visitor.event(params).send();
+        analytics.track(eventName, parameters)
         return Promise.resolve({});
     }
  }
+
+ module.exports = AgnosticAnalyticsAdapter;
