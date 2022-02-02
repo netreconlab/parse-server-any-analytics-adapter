@@ -14,6 +14,7 @@ class Errors extends Error {
      */
     static get Error() {
       return Object.freeze({
+        testError: new Error('Testing custom error.')
       });
     }
   }

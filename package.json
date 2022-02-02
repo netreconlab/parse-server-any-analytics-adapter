@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "description": "Universal analytics adapter for Parse Server",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npx nyc --reporter=lcov jasmine"
   },
   "repository": {
     "type": "git",
@@ -24,5 +25,8 @@
   "homepage": "https://github.com/netreconlab/parse-any-analytics#readme",
   "dependencies": {
     "analytics": "^0.7.21"
+  },
+  "devDependencies": {
+    "jasmine": "^4.0.2"
   }
 }
