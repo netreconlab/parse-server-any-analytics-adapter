@@ -25,3 +25,4 @@
   }
   
   module.exports = AnalyticsAdapter;
+  // export {default as AnalyticsAdapter}; 
