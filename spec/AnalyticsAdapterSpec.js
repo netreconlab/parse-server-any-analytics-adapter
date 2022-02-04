@@ -17,4 +17,4 @@ describe('AnalyticsAdapter', () => {
     expect(typeof adapter.trackEvent).toBe('function');
     expect(adapter.trackEvent({ eventName: 'event', parameters: 'param', req: 'req' })).not.toBeUndefined();
   });
-});
+});   
