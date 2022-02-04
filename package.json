@@ -5,7 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "npx nyc --reporter=lcov jasmine"
+    "test": "npx nyc --reporter=lcov jasmine --es-module-specifier-resolution=node"
   },
   "repository": {
     "type": "git",
@@ -15,7 +15,8 @@
     "parse",
     "parse-server",
     "analytics",
-    "analytics-adapter"
+    "analytics-adapter",
+    "agnostic-analytics"
   ],
   "author": "Alyssa Donawa",
   "license": "GNU",
@@ -27,6 +28,9 @@
     "analytics": "^0.7.21"
   },
   "devDependencies": {
-    "jasmine": "^4.0.2"
+    "@babel/preset-env": "^7.16.11",
+    "@babel/preset-typescript": "^7.16.7",
+    "jasmine": "^4.0.2",
+    "typescript": "^4.5.5"
   }
 }

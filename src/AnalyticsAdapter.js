@@ -24,5 +24,7 @@
     }
   }
   
-  module.exports = AnalyticsAdapter;
+  // module.exports = AnalyticsAdapter;
   // export {default as AnalyticsAdapter}; 
+  // const AnalyticsAdapter = () => {}
+  export default AnalyticsAdapter;

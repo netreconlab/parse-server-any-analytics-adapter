@@ -14,7 +14,4 @@ const Parse = {
       }
     }
   };
-  
-  module.exports = {
-    Parse
-  };
+  export default Parse;

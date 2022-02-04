@@ -9,17 +9,18 @@ const Errors = require('./Errors');
  * @description An analytics adapter for Parse Server using the Analytics (agnostic) package
  */
  class AgnosticAnalyticsAdapter extends AnalyticsAdapter {
-    analytics: Analytics;
+    // analytics: Analytics;
+    // const analytics = new Analytics();
 
     /**
      * Creates a new analytics adapter.
      * @param {Object} tracking id 
      */
     constructor(config: {
-        app?: string;
-        version?: string;
-        debug?: boolean;
-        plugins?: AnalyticsPlugin[];
+        app //? : string;
+        version //?: string;
+        debug //?: boolean;
+        plugins //?: AnalyticsPlugin[];
         }) {
 
         /* Initialize analytics */
@@ -34,5 +35,5 @@ const Errors = require('./Errors');
         analytics.track(eventName, parameters);
     }
  }
-
- module.exports = AgnosticAnalyticsAdapter;
+ 
+export default AgnosticAnalyticsAdapter;
