@@ -1,8 +1,8 @@
-const path = require('path');
-const fs = require('fs').promises;
-const Analytics = require('analytics');
-const AnalyticsAdapter = require('./AnalyticsAdapter');
-const Errors = require('./Errors');
+import path from 'path';
+import fs from 'fs';
+import Analytics from 'analytics';
+import AnalyticsAdapter from './AnalyticsAdapter.js';
+import Errors from './Errors.js';      
 
 /**
  * @class AgnosticAnalyticsAdapter
@@ -14,14 +14,21 @@ const Errors = require('./Errors');
 
     /**
      * Creates a new analytics adapter.
-     * @param {Object} tracking id 
-     */
-    constructor(config: {
-        app //? : string;
+     * @param {Object} config: {
+        app //? : string;  
         version //?: string;
         debug //?: boolean;
         plugins //?: AnalyticsPlugin[];
-        }) {
+        } 
+     */
+    constructor(config) {
+        // get parameters
+        const { app, version, debug, plugins} = options || {};
+        // ensure parameters are correct
+        if (app != String) throw Errors.Error.appConfigInvalid;
+        if (version != String) throw Errors.Error.versionConfigInvalid;
+        if (debug != Boolean) throw Errors.Error.debugConfigInvalid;
+        // if (plugins != AnalyticsPlugin[]) throw Errors.Error.pluginsConfigInvalid;
 
         /* Initialize analytics */
         analytics = Analytics(config);

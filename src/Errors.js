@@ -14,7 +14,11 @@ class Errors extends Error {
      */
     static get Error() {
       return Object.freeze({
-        testError: new Error('Testing custom error.')
+        testError: new Error('Testing custom error.'),
+        appConfigInvalid: new Error('Invalid configuration parameter pass to "app", expecting a String.'),
+        versionConfigInvalid: new Error('Invalid configuration parameter pass to "version", expecting a String.'),
+        debugConfigInvalid: new Error('Invalid configuration parameter pass to "debug", expecting a Boolean.'),
+        pluginsConfigInvalid: new Error('Invalid configuration parameter pass to "plugins", expecting a AnalyticsPlugin[].')
       });
     }
   }
