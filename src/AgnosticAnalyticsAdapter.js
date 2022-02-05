@@ -1,16 +1,13 @@
-import path from 'path';
-import fs from 'fs';
-import Analytics from 'analytics';
-import AnalyticsAdapter from './AnalyticsAdapter.js';
-import Errors from './Errors.js';      
+const Analytics = require('analytics');
+const AnalyticsAdapter = require('./AnalyticsAdapter');
+const Errors = require('./Errors');      
 
 /**
  * @class AgnosticAnalyticsAdapter
  * @description An analytics adapter for Parse Server using the Analytics (agnostic) package
  */
  class AgnosticAnalyticsAdapter extends AnalyticsAdapter {
-    // analytics: Analytics;
-    // const analytics = new Analytics();
+    analytics = Analytics;
 
     /**
      * Creates a new analytics adapter.
@@ -22,25 +19,19 @@ import Errors from './Errors.js';
         } 
      */
     constructor(config) {
-        // get parameters
-        const { app, version, debug, plugins} = options || {};
-        // ensure parameters are correct
-        if (app != String) throw Errors.Error.appConfigInvalid;
-        if (version != String) throw Errors.Error.versionConfigInvalid;
-        if (debug != Boolean) throw Errors.Error.debugConfigInvalid;
-        // if (plugins != AnalyticsPlugin[]) throw Errors.Error.pluginsConfigInvalid;
-
+        console.log('*******');
         /* Initialize analytics */
         analytics = Analytics(config);
+        console.log('*******22222');
     }
 
-    appOpened(parameters, req){
-        return Promise.resolve({});
+    appOpened(parameters, req) {
+        trackEvent("AppOpened", parameters, req);
     }
 
-    trackEvent(eventName, parameters, req){
+    trackEvent(eventName, parameters, req) {
         analytics.track(eventName, parameters);
     }
  }
  
-export default AgnosticAnalyticsAdapter;
+ module.exports = AgnosticAnalyticsAdapter;

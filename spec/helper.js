@@ -1,4 +1,3 @@
-// https://github.com/mtrezza/parse-server-api-mail-adapter/blob/alpha/spec/helper.js
 // Simulate Parse User class
 const Parse = {
     User: class User {
@@ -8,10 +7,11 @@ const Parse = {
             return 'ExampleUsername';
           case 'email':
             return 'to@example.com';
-          case 'locale':
-            return 'de-AT';
         }
       }
     }
   };
-  export default Parse;
+
+  module.exports = {
+    Parse
+  };

@@ -1,11 +1,12 @@
 /*eslint no-unused-vars: "off"*/
+
 /**
  * @module Adapters
  */
 /**
  * @interface AnalyticsAdapter
  */
- export class AnalyticsAdapter {
+ class AnalyticsAdapter {
     /**
     @param {any} parameters: the analytics request body, analytics info will be in the dimensions property
     @param {Request} req: the original http request
@@ -24,7 +25,4 @@
     }
   }
   
-  // module.exports = AnalyticsAdapter;
-  // export {default as AnalyticsAdapter}; 
-  // const AnalyticsAdapter = () => {}
-  export default AnalyticsAdapter;
+  module.exports = AnalyticsAdapter;

@@ -23,5 +23,4 @@ class Errors extends Error {
     }
   }
   
-  // module.exports = Errors;
-  export default Errors;
+  module.exports = Errors;
