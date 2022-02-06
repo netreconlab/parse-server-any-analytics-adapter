@@ -9,13 +9,12 @@ const AnalyticsAdapter = require('./AnalyticsAdapter');
 class AnyAnalyticsAdapter extends AnalyticsAdapter {
 
   /**
-     * Creates a new analytics adapter.
-     * @param {Object} config: {
-        app //? : string;
-        version //?: string;
-        debug //?: boolean;
-        plugins //?: AnalyticsPlugin[];
-        }
+   * @description Creates a new analytics adapter.
+   * @param {Object} config analytics core config
+   * @param {string?} [config.app] Name of site / app
+   * @param {string?} [config.version] Version of your app
+   * @param {boolean?} [config.debug] Should analytics run in debug mode
+   * @param {AnalyticsPlugin[]?} [config.plugins] Array of analytics plugins
   */
   constructor(config) {
     super(config);

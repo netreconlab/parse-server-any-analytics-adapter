@@ -2,16 +2,14 @@
 
 const AnalyticsAdapter = require('../src/AnalyticsAdapter');
 
-describe('AnalyticsAdapter', () => {
+describe('AnalyticsAdapter', function () {
   const adapter = new AnalyticsAdapter()
 
-  it('should have a method called appOpened', () => {
-    expect(typeof (adapter.appOpened)).toBe('function');
-    expect(adapter.appOpened({parameters: 'param', req: 'req'})).not.toBeUndefined();
+  it('appOpened should resolve', async () => {
+    expect(adapter.appOpened({"hello": "world"}), "").toBeInstanceOf(Promise);
   });
 
-  it('should have a method called trackEvent', () => {
-    expect(typeof adapter.trackEvent).toBe('function');
-    expect(adapter.trackEvent({ eventName: 'event', parameters: 'param', req: 'req' })).not.toBeUndefined();
+  it('trackEvent should resolve', async () => {
+    expect(adapter.trackEvent("test", {"hello": "world"}), "").toBeInstanceOf(Promise);
   });
 });
