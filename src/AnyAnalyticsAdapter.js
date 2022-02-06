@@ -16,7 +16,7 @@ class AnyAnalyticsAdapter extends AnalyticsAdapter {
         debug //?: boolean;
         plugins //?: AnalyticsPlugin[];
         }
-     */
+  */
   constructor(config) {
     super(config);
 
