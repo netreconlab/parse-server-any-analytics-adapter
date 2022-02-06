@@ -12,6 +12,7 @@
     "parse-server",
     "analytics",
     "analytics-adapter",
+    "any-analytics",
     "agnostic-analytics"
   ],
   "author": "Alyssa Donawa",
@@ -28,7 +29,6 @@
     "analytics": "^0.7.21"
   },
   "devDependencies": {
-    "@analytics/google-analytics": "^0.5.3",
     "@babel/cli": "7.15.7",
     "@babel/core": "7.15.8",
     "@babel/plugin-proposal-object-rest-spread": "7.15.6",
@@ -48,7 +48,7 @@
     "build:watch": "babel src --out-dir lib --source-maps --watch",
     "build": "babel src --out-dir lib --source-maps",
     "lint": "eslint '{src,spec}/**/*.js'",
-    "lint:fix": "eslint '{src,spec,demo}/**/*.js' --fix",
+    "lint:fix": "eslint '{src,spec}/**/*.js' --fix",
     "madge": "node_modules/.bin/madge ./src $npm_config_arg",
     "madge:circular": "npm run madge --arg=--circular",
     "test": "nyc --reporter=lcov jasmine",

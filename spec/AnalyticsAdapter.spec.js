@@ -7,7 +7,7 @@ describe('AnalyticsAdapter', () => {
 
   it('should have a method called appOpened', () => {
     expect(typeof (adapter.appOpened)).toBe('function');
-    //expect(adapter.appOpened({parameters: 'param', req: 'req'})).toBeUndefined();
+    expect(adapter.appOpened({parameters: 'param', req: 'req'})).not.toBeUndefined();
   });
 
   it('should have a method called trackEvent', () => {

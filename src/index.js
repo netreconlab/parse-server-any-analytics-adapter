@@ -1,8 +1,6 @@
-import AgnosticAnalyticsAdapter from './AgnosticAnalyticsAdapter';
-import Errors from './Errors';
+import AnyAnalyticsAdapter from './AnyAnalyticsAdapter';
 
-export default AgnosticAnalyticsAdapter;
+export default AnyAnalyticsAdapter;
 export {
-  AgnosticAnalyticsAdapter,
-  Errors,
+  AnyAnalyticsAdapter,
 };

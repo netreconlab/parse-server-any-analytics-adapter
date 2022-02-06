@@ -6,23 +6,23 @@
 /**
  * @interface AnalyticsAdapter
  */
- class AnalyticsAdapter {
-    /**
+class AnalyticsAdapter {
+  /**
     @param {any} parameters: the analytics request body, analytics info will be in the dimensions property
     @param {Request} req: the original http request
      */
-    appOpened(parameters, req) {
-      return Promise.resolve({});
-    }
-  
-    /**
+  appOpened(parameters, req) {
+    return Promise.resolve({});
+  }
+
+  /**
     @param {String} eventName: the name of the custom eventName
     @param {any} parameters: the analytics request body, analytics info will be in the dimensions property
     @param {Request} req: the original http request
      */
-    trackEvent(eventName, parameters, req) {
-      return Promise.resolve({});
-    }
+  trackEvent(eventName, parameters, req) {
+    return Promise.resolve({});
   }
-  
-  module.exports = AnalyticsAdapter;
+}
+
+module.exports = AnalyticsAdapter;
