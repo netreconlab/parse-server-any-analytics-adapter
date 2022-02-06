@@ -25,12 +25,12 @@ class AnyAnalyticsAdapter extends AnalyticsAdapter {
   }
 
   appOpened(parameters, req) {
-    this.trackEvent("AppOpened", parameters, req);
+    return this.trackEvent("AppOpened", parameters, req);
   }
 
   /* eslint-disable-next-line no-unused-vars */
   trackEvent(eventName, parameters, req) {
-    this.analytics.track(eventName, parameters);
+    return this.analytics.track(eventName, parameters);
   }
 }
 
