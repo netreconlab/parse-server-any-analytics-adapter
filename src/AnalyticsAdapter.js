@@ -1,12 +1,10 @@
-/*eslint no-unused-vars: "off"*/
+/* eslint no-unused-vars: "off" */
 
-/**
- * @module Adapters
- */
 /**
  * @interface AnalyticsAdapter
  */
 class AnalyticsAdapter {
+
   /**
     @param {any} parameters: the analytics request body, analytics info will be in the dimensions property
     @param {Request} req: the original http request
