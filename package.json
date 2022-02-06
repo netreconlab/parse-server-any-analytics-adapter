@@ -1,7 +1,7 @@
 {
   "name": "parse-any-analytics",
   "version": "0.0.1",
-  "description": "Universal analytics adapter for Parse Server",
+  "description": "Universal analytics adapter for Parse Server.",
   "main": "./lib/index.js",
   "repository": {
     "type": "git",
@@ -26,23 +26,21 @@
     "lib"
   ],
   "dependencies": {
-    "analytics": "^0.7.21"
+    "analytics": "^0.7.23"
   },
   "devDependencies": {
-    "@babel/cli": "7.15.7",
-    "@babel/core": "7.15.8",
-    "@babel/plugin-proposal-object-rest-spread": "7.15.6",
-    "@babel/plugin-transform-flow-strip-types": "7.14.5",
+    "@babel/cli": "7.17.0",
+    "@babel/core": "7.17.0",
+    "@babel/eslint-parser": "7.17.0",
     "@babel/preset-env": "^7.16.11",
-    "@babel/preset-typescript": "^7.16.7",
-    "@types/jasmine": "^2.6.0",
+    "@babel/preset-typescript": "7.16.7",
+    "@types/jasmine": "3.10.0",
+    "eslint": "8.8.0",
+    "eslint-plugin-flowtype": "8.0.3",
     "jasmine": "^4.0.2",
-    "babel-eslint": "10.1.0",
-    "typescript": "^4.5.5",
-    "eslint": "7.32.0",
-    "eslint-plugin-flowtype": "5.9.0",
     "madge": "5.0.1",
-    "nyc": "15.1.0"
+    "nyc": "15.1.0",
+    "typescript": "4.5.5"
   },
   "scripts": {
     "build:watch": "babel src --out-dir lib --source-maps --watch",
