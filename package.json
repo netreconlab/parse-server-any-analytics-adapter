@@ -43,8 +43,8 @@
     "typescript": "4.5.5"
   },
   "scripts": {
-    "build:watch": "babel src --out-dir lib --source-maps --watch",
     "build": "babel src --out-dir lib --source-maps",
+    "build:watch": "babel src --out-dir lib --source-maps --watch",
     "lint": "eslint '{src,spec}/**/*.js'",
     "lint:fix": "eslint '{src,spec}/**/*.js' --fix",
     "madge": "node_modules/.bin/madge ./src $npm_config_arg",
