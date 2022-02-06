@@ -7,9 +7,8 @@ const AnalyticsAdapter = require('./AnalyticsAdapter');
  * [Analytics](https://github.com/DavidWells/analytics) package.
  */
 class AnyAnalyticsAdapter extends AnalyticsAdapter {
-    analytics = {};
 
-    /**
+  /**
      * Creates a new analytics adapter.
      * @param {Object} config: {
         app //? : string;
@@ -18,20 +17,21 @@ class AnyAnalyticsAdapter extends AnalyticsAdapter {
         plugins //?: AnalyticsPlugin[];
         }
      */
-    constructor(config) {
-      super(config);
+  constructor(config) {
+    super(config);
 
-      /* Initialize analytics */
-      this.analytics = Analytics(config);
-    }
+    /* Initialize analytics */
+    this.analytics = Analytics(config);
+  }
 
-    appOpened(parameters, req) {
-      this.trackEvent("AppOpened", parameters, req);
-    }
+  appOpened(parameters, req) {
+    this.trackEvent("AppOpened", parameters, req);
+  }
 
-    trackEvent(eventName, parameters, req) {
-      this.analytics.track(eventName, parameters);
-    }
+  // eslint-disable-next-line no-unused-vars
+  trackEvent(eventName, parameters, req) {
+    this.analytics.track(eventName, parameters);
+  }
 }
 
 module.exports = AnyAnalyticsAdapter;
