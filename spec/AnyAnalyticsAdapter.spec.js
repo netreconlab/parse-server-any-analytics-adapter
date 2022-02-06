@@ -9,11 +9,11 @@ describe('AnyAnalyticsAdapter', function () {
     plugins: []
   });
 
-  it('should have a method called appOpened', async () => {
+  it('appOpened should resolve', async () => {
     expect(adapter.appOpened({"hello": "world"}), "").toBeInstanceOf(Promise);
   });
 
-  it('should have a method called trackEvent', async () => {
+  it('trackEvent should resolve', async () => {
     expect(adapter.trackEvent("test", {"hello": "world"}), "").toBeInstanceOf(Promise);
   });
 });
