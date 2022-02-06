@@ -13,6 +13,7 @@ coverage
 # OS stuff
 .DS_Store
 .tmp
+lib
 
 dist
 misc

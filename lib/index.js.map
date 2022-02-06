@@ -1,1 +1,0 @@
-{"version":3,"sources":["../src/index.js"],"names":["AgnosticAnalyticsAdapter"],"mappings":";;;;;;;;;;;;;;;;;;;AAAA;;AACA;;;;eAEeA,oC","sourcesContent":["import AgnosticAnalyticsAdapter from './AgnosticAnalyticsAdapter';\nimport Errors from './Errors';\n\nexport default AgnosticAnalyticsAdapter;\nexport {\n  AgnosticAnalyticsAdapter,\n  Errors,\n};"],"file":"index.js"}
