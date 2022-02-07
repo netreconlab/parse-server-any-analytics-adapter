@@ -7,7 +7,7 @@ on:
     branches:
       - '**'
 env:
-  NODE_VERSION: 14.16.1
+  NODE_VERSION: 14.19.0
 jobs:
   check-circular:
      name: Circular Dependencies
