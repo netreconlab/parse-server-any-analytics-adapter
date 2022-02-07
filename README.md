@@ -13,15 +13,15 @@
 
 This library allow a [Parse Server](https://github.com/parse-community/parse-server) to leverage the [Analytics](https://github.com/DavidWells/analytics) library to connect to any [3rd party analytics](https://getanalytics.io/plugins/) tool :chart:.
 
-## Table of Contents <!-- omit in toc -->
+# Table of Contents <!-- omit in toc -->
 
 - [Usage](#usage)
   - [Server](#server) 
   - [Client](#client)
 
 
-## Usage
-#### Server
+# Usage
+## Server
 
 ```javascript
 import AnyAnalyticsAdapter from 'parse-server-any-analytics-adapter'
@@ -57,7 +57,7 @@ const api = new ParseServer({
 ...
 ```
 
-#### Client
+## Client
 
 You can use [REST](https://docs.parseplatform.org/rest/guide/#analytics) or any [Parse SDK](https://parseplatform.org/#sdks) that has the ability to send Parse Analytics such as the [Parse-Swift SDK](https://github.com/parse-community/Parse-Swift/blob/main/ParseSwift.playground/Pages/16%20-%20Analytics.xcplaygroundpage/Contents.swift):
 
