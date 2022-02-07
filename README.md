@@ -29,8 +29,8 @@ import customerIo from '@analytics/customerio'
 
 /* Initialize AnyAnalytics with with any and all 3rd party analytics of your choosing. */
 const anyAnalytics = AnyAnalyticsAdapter({
-  app: 'my-app-name',
-  version: 100,
+  app: 'my-app-name', // Name of site / app
+  version: 100, // Version of your app
   plugins: [
     googleAnalytics({
       trackingId: 'UA-121991291',
@@ -38,7 +38,7 @@ const anyAnalytics = AnyAnalyticsAdapter({
     customerIo({
       siteId: '123-xyz'
     })
-  ]
+  ] // Array of analytics plugins
 })
 
 /* Initialize parse server */
