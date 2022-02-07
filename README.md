@@ -30,16 +30,16 @@ import customerIo from '@analytics/customerio'
 
 /* Initialize AnyAnalytics with with any and all 3rd party analytics of your choosing. */
 const anyAnalytics = AnyAnalyticsAdapter({
-  app: 'my-app-name', // Name of site / app
-  version: 100, // Version of your app
-  plugins: [
+  app: 'my-app-name', /* Name of site / app */
+  version: 100, /* Version of your app */
+  plugins: [ /* Array of analytics plugins */
     googleAnalytics({
       trackingId: 'UA-121991291',
     }),
     customerIo({
       siteId: '123-xyz'
     })
-  ] // Array of analytics plugins
+  ]
 })
 
 /* Initialize parse server */
@@ -54,23 +54,14 @@ const api = new ParseServer({
 });
 
 /* Finish mounting your Parse Server */
-const app = express();
-
-app.use('/public', express.static(path.join(__dirname, '/public')));
-
-const mountPath = process.env.PARSE_SERVER_MOUNT_PATH || '/parse';
-app.use(mountPath, api.app);
-
-app.get('/', function(req, res) {
-  res.status(200).send('I dream of being a website.  Please start the parse-server repo on GitHub!');
-});
+...
 ```
 
 #### Client
 
 You can use [REST](https://docs.parseplatform.org/rest/guide/#analytics) or any [Parse SDK](https://parseplatform.org/#sdks) that has the ability to send Parse Analytics such as the [Parse-Swift SDK](https://github.com/parse-community/Parse-Swift/blob/main/ParseSwift.playground/Pages/16%20-%20Analytics.xcplaygroundpage/Contents.swift).
 
-```javascript
+```swift
 //: To track when the app has been opened, do the following.
 ParseAnalytics.trackAppOpened { result in
     switch result {
