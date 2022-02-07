@@ -12,14 +12,12 @@ netreconlab/parse-server-any-analytics-adapter
 
 This library allows Parse Servers to leverage the [Analytics library](https://github.com/DavidWells/analytics) to connect to any [3rd party analytics](https://getanalytics.io/plugins/) tool. :chart:
 
-## Table of Contents <!-- omit in toc -->
-<!-- AUTO-GENERATED-CONTENT:START (TOC:collapse=true&collapseText=Click to expand) -->
-<details>
-<summary>Click to expand</summary>
+## Table of Contents 
 
+- [Usage](https://github.com/netreconlab/parse-server-any-analytics-adapter/edit/adapter/README.md#usage)
+  - [Server](https://github.com/netreconlab/parse-server-any-analytics-adapter/edit/adapter/README.md#server) 
+  - [Client](https://github.com/netreconlab/parse-server-any-analytics-adapter/edit/adapter/README.md#client)
 
-</details>
-<!-- AUTO-GENERATED-CONTENT:END -->
 
 # Usage
 ## Server
