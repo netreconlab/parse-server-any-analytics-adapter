@@ -1,5 +1,5 @@
 # parse-server-any-analytics-adapter
-netreconlab/parse-server-any-analytics-adapter
+<!-- netreconlab/parse-server-any-analytics-adapter -->
 
 [![ci](https://github.com/netreconlab/parse-server-any-analytics-adapter/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/netreconlab/parse-server-any-analytics-adapter/actions/workflows/ci.yml)
 [![release](https://github.com/netreconlab/parse-server-any-analytics-adapter/actions/workflows/release.yml/badge.svg?branch=main)](https://github.com/netreconlab/parse-server-any-analytics-adapter/actions/workflows/release.yml)
@@ -23,7 +23,7 @@ This library allows Parse Servers to leverage the [Analytics library](https://gi
 ## Server
 
 ```javascript
-import AnyAnalyticsAdapter from 'parse-any-analytics'
+import AnyAnalyticsAdapter from 'parse-server-any-analytics-adapter'
 import googleAnalytics from '@analytics/google-analytics'
 import customerIo from '@analytics/customerio'
 
