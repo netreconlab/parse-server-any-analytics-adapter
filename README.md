@@ -19,8 +19,8 @@ This library allows Parse Servers to leverage the [Analytics library](https://gi
   - [Client](https://github.com/netreconlab/parse-server-any-analytics-adapter/edit/adapter/README.md#client)
 
 
-# Usage
-## Server
+## Usage
+#### Server
 
 ```javascript
 import AnyAnalyticsAdapter from 'parse-server-any-analytics-adapter'
@@ -65,7 +65,7 @@ app.get('/', function(req, res) {
 });
 ```
 
-## Client
+#### Client
 
 You can use REST or any Parse SDK client that has the ability to use Parse Analytics such as the [Parse-Swift SDK](https://github.com/parse-community/Parse-Swift/blob/main/ParseSwift.playground/Pages/16%20-%20Analytics.xcplaygroundpage/Contents.swift).
 
