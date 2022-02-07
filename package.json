@@ -1,0 +1,56 @@
+{
+  "name": "parse-server-any-analytics-adapter",
+  "version": "1.0.0",
+  "description": "Universal analytics adapter for Parse Server.",
+  "main": "./lib/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/netreconlab/parse-server-any-analytics-adapter.git"
+  },
+  "keywords": [
+    "parse",
+    "parse-server",
+    "analytics",
+    "analytics-adapter",
+    "any-analytics",
+    "agnostic-analytics"
+  ],
+  "author": "Alyssa Donawa",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/netreconlab/parse-server-any-analytics-adapter/issues"
+  },
+  "homepage": "https://github.com/netreconlab/parse-server-any-analytics-adapter#readme",
+  "files": [
+    "src",
+    "lib"
+  ],
+  "dependencies": {
+    "analytics": "^0.7.23"
+  },
+  "devDependencies": {
+    "@babel/cli": "7.17.0",
+    "@babel/core": "7.17.0",
+    "@babel/eslint-parser": "7.17.0",
+    "@babel/preset-env": "^7.16.11",
+    "@babel/preset-typescript": "7.16.7",
+    "@types/jasmine": "3.10.0",
+    "eslint": "8.8.0",
+    "eslint-plugin-flowtype": "8.0.3",
+    "jasmine": "^4.0.2",
+    "madge": "5.0.1",
+    "nyc": "15.1.0",
+    "typescript": "4.5.5"
+  },
+  "scripts": {
+    "build": "babel src --out-dir lib --source-maps",
+    "build:watch": "babel src --out-dir lib --source-maps --watch",
+    "lint": "eslint '{src,spec}/**/*.js'",
+    "lint:fix": "eslint '{src,spec}/**/*.js' --fix",
+    "madge": "node_modules/.bin/madge ./src $npm_config_arg",
+    "madge:circular": "npm run madge --arg=--circular",
+    "test": "nyc --reporter=lcov jasmine",
+    "posttest": "nyc report --reporter=json",
+    "prepare": "npm run build && npm test"
+  }
+}
