@@ -1,11 +1,11 @@
 {
-  "name": "parse-any-analytics",
+  "name": "parse-server-any-analytics-adapter",
   "version": "1.0.0",
   "description": "Universal analytics adapter for Parse Server.",
   "main": "./lib/index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/netreconlab/parse-any-analytics.git"
+    "url": "git+https://github.com/netreconlab/parse-server-any-analytics-adapter.git"
   },
   "keywords": [
     "parse",
@@ -18,9 +18,9 @@
   "author": "Alyssa Donawa",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/netreconlab/parse-any-analytics/issues"
+    "url": "https://github.com/netreconlab/parse-server-any-analytics-adapter/issues"
   },
-  "homepage": "https://github.com/netreconlab/parse-any-analytics#readme",
+  "homepage": "https://github.com/netreconlab/parse-server-any-analytics-adapter#readme",
   "files": [
     "src",
     "lib"
