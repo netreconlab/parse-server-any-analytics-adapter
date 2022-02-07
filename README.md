@@ -15,9 +15,9 @@ This library allow a [Parse Server](https://github.com/parse-community/parse-ser
 
 ## Table of Contents <!-- omit in toc -->
 
-- [Usage](https://github.com/netreconlab/parse-server-any-analytics-adapter/edit/adapter/README.md#usage)
-  - [Server](https://github.com/netreconlab/parse-server-any-analytics-adapter/edit/adapter/README.md#server) 
-  - [Client](https://github.com/netreconlab/parse-server-any-analytics-adapter/edit/adapter/README.md#client)
+- [Usage](#usage)
+  - [Server](#server) 
+  - [Client](#client)
 
 
 ## Usage
