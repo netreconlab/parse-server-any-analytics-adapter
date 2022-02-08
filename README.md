@@ -1,26 +1,26 @@
 # parse-server-any-analytics-adapter
 <!-- netreconlab/parse-server-any-analytics-adapter -->
 
+[![npm version](https://badge.fury.io/js/parse-server-any-analytics-adapter.svg)](https://badge.fury.io/js/parse-server-any-analytics-adapter)
 [![ci](https://github.com/netreconlab/parse-server-any-analytics-adapter/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/netreconlab/parse-server-any-analytics-adapter/actions/workflows/ci.yml)
 [![release](https://github.com/netreconlab/parse-server-any-analytics-adapter/actions/workflows/release.yml/badge.svg?branch=main)](https://github.com/netreconlab/parse-server-any-analytics-adapter/actions/workflows/release.yml)
-[![npm version](https://badge.fury.io/js/parse-server-any-analytics-adapter.svg)](https://badge.fury.io/js/parse-server-any-analytics-adapter)
 [![codecov](https://codecov.io/gh/netreconlab/parse-server-any-analytics-adapter/branch/main/graph/badge.svg)](https://codecov.io/gh/netreconlab/parse-server-any-analytics-adapter)
-<!-- [![vulnerabilities](https://snyk.io/test/github/netreconlab/parse-server-any-analytics-adapter/badge.svg)](https://snyk.io/test/github/netreconlab/parse-server-any-analytics-adapter) -->
+[![vulnerabilities](https://snyk.io/test/github/netreconlab/parse-server-any-analytics-adapter/badge.svg)](https://snyk.io/test/github/netreconlab/parse-server-any-analytics-adapter)
 [![dependency up-to-date](https://img.shields.io/librariesio/release/npm/parse-server-any-analytics-adapter)](https://libraries.io/npm/parse-server-any-analytics-adapter)
 [![weekly downloads](https://img.shields.io/npm/dw/parse-server-any-analytics-adapter)](https://www.npmjs.com/package/parse-server-any-analytics-adapter)
+[![License](https://img.shields.io/badge/license-MIT-green.svg?style=flat)](https://github.com/netreconlab/parse-server-any-analytics-adapter/#license)
+
+This library allow a [Parse Server](https://github.com/parse-community/parse-server) to leverage the [Analytics](https://github.com/DavidWells/analytics) library to connect to any [3rd party analytics](https://getanalytics.io/plugins/) tool :chart:.
+
+# Table of Contents <!-- omit in toc -->
+
+- [Usage](#usage)
+  - [Server](#server) 
+  - [Client](#client)
 
 
-This library allows Parse Servers to leverage the [Analytics library](https://github.com/DavidWells/analytics) to connect to any [3rd party analytics](https://getanalytics.io/plugins/) tool. :chart:
-
-## Table of Contents <!-- omit in toc -->
-
-- [Usage](https://github.com/netreconlab/parse-server-any-analytics-adapter/edit/adapter/README.md#usage)
-  - [Server](https://github.com/netreconlab/parse-server-any-analytics-adapter/edit/adapter/README.md#server) 
-  - [Client](https://github.com/netreconlab/parse-server-any-analytics-adapter/edit/adapter/README.md#client)
-
-
-## Usage
-#### Server
+# Usage
+## Server
 
 ```javascript
 import AnyAnalyticsAdapter from 'parse-server-any-analytics-adapter'
@@ -29,16 +29,16 @@ import customerIo from '@analytics/customerio'
 
 /* Initialize AnyAnalytics with with any and all 3rd party analytics of your choosing. */
 const anyAnalytics = AnyAnalyticsAdapter({
-  app: 'my-app-name', // Name of site / app
-  version: 100, // Version of your app
-  plugins: [
+  app: 'my-app-name', /* Name of site / app */
+  version: 100, /* Version of your app */
+  plugins: [ /* Array of analytics plugins */
     googleAnalytics({
       trackingId: 'UA-121991291',
     }),
     customerIo({
       siteId: '123-xyz'
     })
-  ] // Array of analytics plugins
+  ]
 })
 
 /* Initialize parse server */
@@ -53,23 +53,14 @@ const api = new ParseServer({
 });
 
 /* Finish mounting your Parse Server */
-const app = express();
-
-app.use('/public', express.static(path.join(__dirname, '/public')));
-
-const mountPath = process.env.PARSE_SERVER_MOUNT_PATH || '/parse';
-app.use(mountPath, api.app);
-
-app.get('/', function(req, res) {
-  res.status(200).send('I dream of being a website.  Please start the parse-server repo on GitHub!');
-});
+...
 ```
 
-#### Client
+## Client
 
-You can use REST or any Parse SDK client that has the ability to use Parse Analytics such as the [Parse-Swift SDK](https://github.com/parse-community/Parse-Swift/blob/main/ParseSwift.playground/Pages/16%20-%20Analytics.xcplaygroundpage/Contents.swift).
+You can use [REST](https://docs.parseplatform.org/rest/guide/#analytics) or any [Parse SDK](https://parseplatform.org/#sdks) that has the ability to send Parse Analytics such as the [Parse-Swift SDK](https://github.com/parse-community/Parse-Swift/blob/main/ParseSwift.playground/Pages/16%20-%20Analytics.xcplaygroundpage/Contents.swift):
 
-```javascript
+```swift
 //: To track when the app has been opened, do the following.
 ParseAnalytics.trackAppOpened { result in
     switch result {
