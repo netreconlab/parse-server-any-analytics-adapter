@@ -14,10 +14,18 @@ This library allow a [Parse Server](https://github.com/parse-community/parse-ser
 
 # Table of Contents <!-- omit in toc -->
 
+- [Installation](#installation)
 - [Usage](#usage)
   - [Server](#server) 
   - [Client](#client)
 
+# Installation
+
+This module is distributed via [npm](https://npmjs.com/package/analytics):
+
+```bash
+npm install parse-server-any-analytics-adapter --save
+```
 
 # Usage
 ## Server
