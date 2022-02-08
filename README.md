@@ -8,7 +8,7 @@
 [![vulnerabilities](https://snyk.io/test/github/netreconlab/parse-server-any-analytics-adapter/badge.svg)](https://snyk.io/test/github/netreconlab/parse-server-any-analytics-adapter)
 [![dependency up-to-date](https://img.shields.io/librariesio/release/npm/parse-server-any-analytics-adapter)](https://libraries.io/npm/parse-server-any-analytics-adapter)
 [![weekly downloads](https://img.shields.io/npm/dw/parse-server-any-analytics-adapter)](https://www.npmjs.com/package/parse-server-any-analytics-adapter)
-[![License](https://img.shields.io/badge/license-MIT-green.svg?style=flat)](https://github.com/netreconlab/ParseCareKit/#license)
+[![License](https://img.shields.io/badge/license-MIT-green.svg?style=flat)](https://github.com/netreconlab/parse-server-any-analytics-adapter/#license)
 
 This library allow a [Parse Server](https://github.com/parse-community/parse-server) to leverage the [Analytics](https://github.com/DavidWells/analytics) library to connect to any [3rd party analytics](https://getanalytics.io/plugins/) tool :chart:.
 
