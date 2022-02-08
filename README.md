@@ -3,7 +3,7 @@
 
 [![npm version](https://badge.fury.io/js/parse-server-any-analytics-adapter.svg)](https://badge.fury.io/js/parse-server-any-analytics-adapter)
 [![ci](https://github.com/netreconlab/parse-server-any-analytics-adapter/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/netreconlab/parse-server-any-analytics-adapter/actions/workflows/ci.yml)
-[![release](https://github.com/netreconlab/parse-server-any-analytics-adapter/actions/workflows/release.yml/badge.svg?branch=main)](https://github.com/netreconlab/parse-server-any-analytics-adapter/actions/workflows/release.yml)
+[![release](https://github.com/netreconlab/parse-server-any-analytics-adapter/actions/workflows/release.yml/badge.svg)](https://github.com/netreconlab/parse-server-any-analytics-adapter/actions/workflows/release.yml)
 [![codecov](https://codecov.io/gh/netreconlab/parse-server-any-analytics-adapter/branch/main/graph/badge.svg)](https://codecov.io/gh/netreconlab/parse-server-any-analytics-adapter)
 [![vulnerabilities](https://snyk.io/test/github/netreconlab/parse-server-any-analytics-adapter/badge.svg)](https://snyk.io/test/github/netreconlab/parse-server-any-analytics-adapter)
 [![dependency up-to-date](https://img.shields.io/librariesio/release/npm/parse-server-any-analytics-adapter)](https://libraries.io/npm/parse-server-any-analytics-adapter)
