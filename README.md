@@ -31,12 +31,12 @@ npm install parse-server-any-analytics-adapter --save
 ## Server
 
 ```javascript
-import AnyAnalyticsAdapter from 'parse-server-any-analytics-adapter'
-import googleAnalytics from '@analytics/google-analytics'
-import customerIo from '@analytics/customerio'
+const { AnyAnalyticsAdapter } = require('parse-server-any-analytics-adapter');
+const { init: googleAnalytics } = require('@analytics/google-analytics');
+const { init: customerIo } = require('@analytics/customerio');
 
 /* Initialize AnyAnalytics with with any and all 3rd party analytics of your choosing. */
-const anyAnalytics = AnyAnalyticsAdapter({
+const anyAnalytics = new AnyAnalyticsAdapter({
   app: 'my-app-name', /* Name of site / app */
   version: 100, /* Version of your app */
   plugins: [ /* Array of analytics plugins */
@@ -47,7 +47,7 @@ const anyAnalytics = AnyAnalyticsAdapter({
       siteId: '123-xyz'
     })
   ]
-})
+});
 
 /* Initialize parse server */
 const api = new ParseServer({
