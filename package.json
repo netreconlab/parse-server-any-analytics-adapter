@@ -1,6 +1,6 @@
 {
   "name": "parse-server-any-analytics-adapter",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Universal analytics adapter for Parse Server.",
   "main": "./lib/index.js",
   "repository": {
