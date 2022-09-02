@@ -1,6 +1,6 @@
 {
   "name": "parse-server-any-analytics-adapter",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Universal analytics adapter for Parse Server.",
   "main": "./lib/index.js",
   "repository": {
@@ -26,7 +26,7 @@
     "lib"
   ],
   "dependencies": {
-    "analytics": "^0.7.23"
+    "analytics": "^0.8.1"
   },
   "devDependencies": {
     "@babel/cli": "7.17.0",
