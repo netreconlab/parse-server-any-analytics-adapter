@@ -66,7 +66,7 @@ const api = new ParseServer({
 
 ## Client
 
-You can use [REST](https://docs.parseplatform.org/rest/guide/#analytics) or any [Parse SDK](https://parseplatform.org/#sdks) that has the ability to send Parse Analytics such as the [Parse-Swift SDK](https://github.com/parse-community/Parse-Swift/blob/main/ParseSwift.playground/Pages/16%20-%20Analytics.xcplaygroundpage/Contents.swift):
+You can use [REST](https://docs.parseplatform.org/rest/guide/#analytics) or any [Parse SDK](https://parseplatform.org/#sdks) that has the ability to send Parse Analytics such as the [Parse-Swift SDK](https://github.com/netreconlab/Parse-Swift/blob/main/ParseSwift.playground/Pages/16%20-%20Analytics.xcplaygroundpage/Contents.swift):
 
 ```swift
 //: To track when the app has been opened, do the following.
