@@ -6,6 +6,8 @@ on:
   pull_request:
     branches:
       - '**'
+  merge_group:
+    branches: [ main ]
 env:
   NODE_VERSION: 14.19.0
 jobs:
