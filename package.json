@@ -35,7 +35,7 @@
     "@babel/preset-env": "^7.16.11",
     "@babel/preset-typescript": "7.21.5",
     "@types/jasmine": "4.3.2",
-    "eslint": "8.41.0",
+    "eslint": "8.42.0",
     "eslint-plugin-flowtype": "8.0.3",
     "jasmine": "^5.0.0",
     "madge": "6.1.0",
