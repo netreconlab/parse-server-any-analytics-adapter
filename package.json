@@ -26,7 +26,7 @@
     "lib"
   ],
   "dependencies": {
-    "analytics": "^0.8.9"
+    "analytics": "0.8.16"
   },
   "devDependencies": {
     "@babel/cli": "7.25.7",
