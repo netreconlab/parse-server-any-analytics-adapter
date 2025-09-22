@@ -26,21 +26,21 @@
     "lib"
   ],
   "dependencies": {
-    "analytics": "0.8.16"
+    "analytics": "0.8.19"
   },
   "devDependencies": {
     "@babel/cli": "7.28.3",
-    "@babel/core": "7.28.3",
+    "@babel/core": "7.28.4",
     "@babel/eslint-parser": "7.28.4",
     "@babel/preset-env": "^7.16.11",
     "@babel/preset-typescript": "7.27.1",
-    "@types/jasmine": "5.1.8",
+    "@types/jasmine": "5.1.9",
     "eslint": "8.57.0",
     "eslint-plugin-flowtype": "8.0.3",
     "jasmine": "^5.0.0",
     "madge": "8.0.0",
     "nyc": "17.1.0",
-    "typescript": "5.8.3"
+    "typescript": "5.9.2"
   },
   "scripts": {
     "build": "babel src --out-dir lib --source-maps",
