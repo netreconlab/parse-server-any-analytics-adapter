@@ -31,7 +31,7 @@
   "devDependencies": {
     "@babel/cli": "7.28.3",
     "@babel/core": "7.28.5",
-    "@babel/eslint-parser": "7.28.5",
+    "@babel/eslint-parser": "7.28.6",
     "@babel/preset-env": "^7.16.11",
     "@babel/preset-typescript": "7.28.5",
     "@types/jasmine": "5.1.15",
