@@ -37,7 +37,7 @@
     "@types/jasmine": "5.1.15",
     "eslint": "8.57.0",
     "eslint-plugin-flowtype": "8.0.3",
-    "jasmine": "^5.0.0",
+    "jasmine": "^6.0.0",
     "madge": "8.0.0",
     "nyc": "17.1.0",
     "typescript": "5.9.3"
